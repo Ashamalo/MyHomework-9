@@ -19,7 +19,7 @@
 }
 
 html {
-    font-size: var(font-size);
+    font-size: var(--font-size);
     font-family: var(--font);
 }
 
@@ -53,7 +53,7 @@ li a {
 }
 
 header ul a:hover {
-    color: var(--nickel-color);
+    color: var(--metallic-blue);
     transition: 0.3s linear;
 }
 
