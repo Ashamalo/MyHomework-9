@@ -1,6 +1,8 @@
 :root {
     --font-size: 16px;
     --font: "Roboto", serif;
+    --font-regular: 400;
+    --font-medium: 500;
     --black-color: #000;
     --white-color: #fff;
     --metallic-blue: #34547A;
@@ -10,6 +12,8 @@
     --gap-lg: 40px;
     --gap-sm: 10px;
     --gap-xl: 80px;
+    --line-height-m: 26px;
+    --line-height-s: 24px;
 }
 
 * {
@@ -41,10 +45,10 @@ header {
     padding: var(--gap-xl) 0;
 }
 
-ul {
+ul, .project-item {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: var(--gap);
 }
 
 li a {
@@ -64,16 +68,16 @@ header ul a:hover {
 
 h1 {
     color: var(--black-color);
-    font-weight: 500;
+    font-weight: var(--font-medium);
     font-size: 48px;
     line-height: 78px;
 }
 
 p {
     color: var(--nickel-color);
-    font-weight: 400;
+    font-weight: var(--font-regular);
     font-size: var(--font-size);
-    line-height: 26px;
+    line-height: var(--line-height-m);
     max-width: 540px;
     padding: 65px 0 65px;
 }
@@ -82,9 +86,9 @@ p {
     background-color: var(--metallic-blue);
     color: var(--white-color);
     padding: 19px 41px 20px;
-    font-weight: 400;
+    font-weight: var(--font-regular);
     font-size: var(--font-size);
-    line-height: 26px;
+    line-height: var(--line-height-m);
     text-align: center;
     text-transform: uppercase;
     border: none;
@@ -122,11 +126,6 @@ p {
     color: var(--white-color);
 }
 
-.project-item {
-    display: flex;
-    gap: 20px;
-}
-
 .project-img {
     width: 50px;
     height: 50px;
@@ -135,24 +134,22 @@ p {
 .project-item p:first-child {
     color: var(--white-color);
     font-size: 21px;
-    font-weight: 500;
-    line-height: 24px;
-    max-width: auto;
+    font-weight: var(--font-medium);
+    line-height: var(--line-height-s);
     padding: 0 0 10px 0;
 }
 
 .project-item p:last-child {
     color: var(--white-color);
     font-size: var(--font-size);
-    font-weight: 400;
+    font-weight: var(--font-regular);
     line-height: 16px;
-    max-width: auto;
     padding: 0;
 }
 
 h2 {
     font-size: 32px;
-    font-weight: 500;
+    font-weight: var(--font-medium);
     line-height: 37px;
     text-align: center;
 }
@@ -168,15 +165,15 @@ footer {
 }
 
 footer p:first-child {
-    font-weight: 500;
+    font-weight: var(--font-medium);
     font-size: 21px;
-    line-height: 24px;
+    line-height: var(--line-height-s);
     color: var(--white-color);
     padding: 0 0 20px 0;
 }
 
 footer p:last-child {
-    font-weight: 400;
+    font-weight: var(--font-regular);
     font-size: 13px;
     line-height: 21px;
     color: var(--white-color);
