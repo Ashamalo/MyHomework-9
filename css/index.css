@@ -1,5 +1,6 @@
 :root {
     --font-size: 16px;
+    --font-size-s: 14px;
     --font: "Roboto", serif;
     --font-regular: 400;
     --font-medium: 500;
@@ -155,7 +156,7 @@ h2 {
 }
 
 iframe {
-    width: 1110px;
+    width: 90%;
     height: 600px;
     margin-top: 50px;
 }
@@ -179,3 +180,97 @@ footer p:last-child {
     color: var(--white-color);
     padding: 0;
 }
+
+@media (min-width:600px) and (max-width:1023px) {
+    .container {
+        max-width: 600px;
+        padding: 0 var(--gap);
+    }
+
+    header {
+        padding: 30px 0;
+    }
+
+    ul, .project-item {
+        gap: var(--gap-sm);
+    }
+
+    .main-section {
+        padding-top: var(--gap-lg);
+        padding-bottom: 70px;
+    }
+
+    h1 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    p {
+        /* font-size: var(--font-size); */
+        /* line-height: var(--line-height-m); */
+        max-width: 540px;
+        padding: 30px 0 30px;
+    }
+
+    /* .btn-write-me {
+        padding: 19px 41px 20px;
+        font-weight: var(--font-regular);
+        font-size: var(--font-size);
+        line-height: var(--line-height-m);
+    } */
+
+    .second-section, .fourth-section {
+        padding: 50px var(--gap-sm) 50px;
+    }
+
+    /* .second-section p, .fourth-section p {
+        padding-bottom: 0;
+        text-align: center;
+    } */
+
+    .third-section {
+        padding: 50px 0;
+    }
+
+    .third-section ul {
+        gap: 25px;
+    }
+
+    .project-item p:first-child {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .project-item p:last-child {
+        font-size: var(--font-size-s);
+        line-height: 16px;
+    }
+
+    h2 {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    iframe {
+        height: 500px;
+        margin-top: 25px;
+    }
+
+    footer {
+        padding: 25px 0;
+    }
+
+    footer p:first-child {
+        font-size: 19px;
+        line-height: 20px;
+        padding: 0 0 10px 0;
+    }
+
+    footer p:last-child {
+        font-weight: var(--font-regular);
+        font-size: 13px;
+        line-height: 18px;
+    }
+}
+
+/* @media (max-width: 599px) {} */
