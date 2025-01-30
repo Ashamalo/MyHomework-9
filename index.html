@@ -11,12 +11,14 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
+
 </head>
 
 <body>
 
     <header class="bg-grey">
-        <nav class="container">
+
+        <nav class="container nav">
             <ul>
                 <li><a href="#">ГЛАВНАЯ</a></li>
                 <li><a href="#">ОБ АВТОРЕ</a></li>
@@ -25,6 +27,25 @@
                 <li><a href="#">КОНТАКТЫ</a></li>
             </ul>
         </nav>
+
+        <div class="container mobile-navigation">
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <div class="nav-mobile">
+                    <ul>
+                        <li><a href="#">ГЛАВНАЯ</a></li>
+                        <li><a href="#">ОБ АВТОРЕ</a></li>
+                        <li><a href="#">РАБОТЫ</a></li>
+                        <li><a href="#">ПРОЦЕСС</a></li>
+                        <li><a href="#">КОНТАКТЫ</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
     </header>
 
     <main>
@@ -99,6 +120,7 @@
                     стандартной "рыбой" для текстов на латинице с начала XVI века</p>
                 <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
                 </iframe>
+            </div>
         </section>
     </main>
 
@@ -108,6 +130,7 @@
             <p>(с) 2018. Все права защищены.</p>
         </div>
     </footer>
+    <script src="https://kit.fontawesome.com/523c65d627.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
