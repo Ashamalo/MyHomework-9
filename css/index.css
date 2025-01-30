@@ -322,7 +322,7 @@ footer p:last-child {
     #check:checked~.nav-mobile {
         display: block;
         width: 100%;
-        padding: var(--gap-l);
+        padding: var(--gap-lg) 0 var(--gap) var(--gap-l);
         top: 0;
     }
 
