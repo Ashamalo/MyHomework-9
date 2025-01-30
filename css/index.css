@@ -282,7 +282,7 @@ footer p:last-child {
     }
 
     header {
-        padding: var(--gap-sm);
+        padding: var(--gap-sm) var(--gap-sm) var(--gap-sm) 0;
     }
 
     ul, .project-item {
