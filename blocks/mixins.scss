@@ -1,0 +1,38 @@
+@use 'variables' as *;
+
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin button($bg-color, $text-color, $padding: 10px 20px, $font-size: map-get($font-sizes, basic), $line-height: map-get($line-heights, m)) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $padding;
+    font-size: $font-size;
+    line-height: $line-height;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == "tablet" {
+        @media (min-width: 600px) and (max-width: 1023px) {
+            @content;
+        }
+    } @else if $breakpoint == "mobile" {
+        @media (max-width: 599px) {
+            @content;
+        }
+    }
+}

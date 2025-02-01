@@ -1,0 +1,25 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+header {
+    padding: map-get($gaps, xl) 0;
+
+    ul {
+        @include flex(row, flex-start, flex-start, map-get($gaps, base));
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: map-get($colors, black);
+
+            &:hover {
+                color: map-get($colors, metallic-blue);
+                transition: 0.3s linear;
+            }
+        }
+    }
+}
+
+.mobile-navigation {
+    display: none;
+}

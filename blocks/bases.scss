@@ -1,0 +1,26 @@
+@use 'variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: map-get($font-sizes, basic);
+    font-family: $font;
+}
+
+.container {
+    max-width: 1110px;
+    padding: 0 map-get($gaps, base);
+    margin: 0 auto;
+}
+
+.bg-grey {
+    background-color: map-get($colors, bright-grey);
+}
+
+.bg-metallic-blue {
+    background-color: map-get($colors, metallic-blue);
+}

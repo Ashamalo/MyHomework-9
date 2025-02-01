@@ -1,0 +1,199 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@include respond-to("tablet") {
+    .container {
+        max-width: 600px;
+        padding: 0 map-get($gaps, base);
+    }
+
+    header {
+        padding: map-get($gaps, ml) 0;
+    }
+
+    ul, .project-item {
+        gap: map-get($gaps, sm);
+    }
+
+    .main-section {
+        padding-top: map-get($gaps, lg);
+        padding-bottom: map-get($gaps, xl);
+
+        h1 {
+            font-size: map-get($font-sizes, xl);
+            line-height: map-get($line-heights, l);
+        }
+
+        p {
+            max-width: 540px;
+            padding: map-get($gaps, ml) 0 map-get($gaps, ml);
+        }
+
+        .btn-write-me {
+            padding: 15px map-get($gaps, ml);
+            font-size: map-get($font-sizes, s);
+            line-height: map-get($line-heights, s);
+        }
+    }
+
+    .second-section, .fourth-section, .third-section {
+        padding: map-get($gaps, l) map-get($gaps, sm) map-get($gaps, l);
+    }
+
+    .third-section ul {
+        gap: map-get($gaps, m);
+    }
+
+    .project-item {
+        p:first-child {
+            font-size: map-get($font-sizes, m);
+            line-height: map-get($line-heights, xs);
+        }
+
+        p:last-child {
+            font-size: map-get($font-sizes, s);
+            line-height: map-get($line-heights, xxs);
+        }
+    }
+
+    h2 {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    iframe {
+        height: 500px;
+        margin-top: map-get($gaps, m);
+    }
+
+    footer {
+        padding: map-get($gaps, m) 0;
+
+        p:first-child {
+            font-size: map-get($font-sizes, m);
+            line-height: map-get($line-heights, xs);
+            padding: 0 0 map-get($gaps, sm) 0;
+        }
+
+        p:last-child {
+            line-height: map-get($line-heights, xs);
+        }
+    }
+}
+
+@include respond-to("mobile") {
+    .container {
+        max-width: 600px;
+        padding: 0 map-get($gaps, base);
+    }
+
+    header {
+        padding: map-get($gaps, sm) map-get($gaps, sm) map-get($gaps, sm) 0;
+
+        .nav {
+            display: none;
+            position: relative;
+        }
+
+        .mobile-navigation {
+            display: block;
+            padding: 0;
+        }
+
+        .checkbtn {
+            cursor: pointer;
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .nav-mobile {
+            display: none;
+            position: absolute;
+            width: 100%;
+            background: lightgray;
+            opacity: .9;
+        }
+
+        input {
+            opacity: 0;
+        }
+
+        #check:checked ~ .nav-mobile {
+            display: block;
+            width: 100%;
+            padding: map-get($gaps, lg) 0 map-get($gaps, base) map-get($gaps, l);
+            top: 0;
+        }
+
+        ul {
+            list-style: none;
+            @include flex(column, center, center, map-get($gaps, base));
+            align-items: flex-start;
+        }
+    }
+
+    .main-section {
+        padding: 0 0 map-get($gaps, base);
+
+        h1 {
+            font-size: map-get($font-sizes, xl);
+            line-height: map-get($line-heights, l);
+        }
+
+        p {
+            max-width: 540px;
+            padding: map-get($gaps, ml) 0 map-get($gaps, ml);
+        }
+
+        .btn-write-me {
+            padding: 15px map-get($gaps, ml);
+            font-size: map-get($font-sizes, s);
+            line-height: map-get($line-heights, s);
+        }
+    }
+
+    .second-section, .fourth-section, .third-section {
+        padding: map-get($gaps, base);
+    }
+
+    .third-section ul {
+        gap: map-get($gaps, m);
+    }
+
+    .project-item {
+        p:first-child {
+            font-size: map-get($font-sizes, m);
+            line-height: map-get($line-heights, xs);
+        }
+
+        p:last-child {
+            font-size: map-get($font-sizes, s);
+            line-height: map-get($line-heights, xxs);
+        }
+    }
+
+    h2 {
+        font-size: map-get($font-sizes, l);
+        line-height: map-get($line-heights, m);
+    }
+
+    iframe {
+        height: 250px;
+        margin-top: map-get($gaps, base);
+    }
+
+    footer {
+        padding: map-get($gaps, base) 0;
+
+        p:first-child {
+            font-size: map-get($font-sizes, s);
+            line-height: map-get($line-heights, xs);
+            padding: 0 0 map-get($gaps, sm) 0;
+        }
+
+        p:last-child {
+            line-height: map-get($line-heights, xxs);
+        }
+    }
+}

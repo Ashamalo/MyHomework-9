@@ -1,0 +1,88 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.main-section {
+    padding-top: map-get($gaps, xl);
+    padding-bottom: 140px;
+
+    h1 {
+        color: map-get($colors, black);
+        font-weight: $font-medium;
+        font-size: 48px;
+        line-height: 78px;
+    }
+
+    p {
+        color: map-get($colors, nickel);
+        font-weight: $font-regular;
+        font-size: map-get($font-sizes, basic);
+        line-height: map-get($line-heights, m);
+        max-width: 540px;
+        padding: 65px 0 65px;
+    }
+
+    .btn-write-me {
+        @include button(map-get($colors, metallic-blue), map-get($colors, white), 19px 41px map-get($gaps, base));
+    }
+}
+
+.second-section, .fourth-section {
+    padding: 112px map-get($gaps, base) 100px;
+    @include flex(column, center, center);
+
+    p {
+        padding-bottom: 0;
+        text-align: center;
+        max-width: 540px;
+    }
+}
+
+.third-section {
+    padding: 100px 0;
+
+    ul {
+        @include flex(row, center, center, 45px);
+        padding: 0;
+        flex-wrap: wrap;
+        color: map-get($colors, white);
+        list-style: none;
+    }
+
+    .project-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .project-item {
+        // display: flex;
+        @include flex(row, center, center, 20px);
+        p:first-child {
+            color: map-get($colors, white);
+            font-size: map-get($font-sizes, ml);
+            font-weight: $font-medium;
+            line-height: map-get($line-heights, s);
+            padding: 0 0 map-get($gaps, sm) 0;
+        }
+
+        p:last-child {
+            color: map-get($colors, white);
+            font-size: map-get($font-sizes, basic);
+            font-weight: $font-regular;
+            line-height: map-get($line-heights, xxs);
+            padding: 0;
+        }
+    }
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: $font-medium;
+    line-height: map-get($line-heights, l);
+    text-align: center;
+}
+
+iframe {
+    width: 90%;
+    height: 600px;
+    margin-top: map-get($gaps, l);
+}

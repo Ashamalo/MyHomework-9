@@ -1,0 +1,39 @@
+$colors: (
+    black: #000,
+    white: #fff,
+    metallic-blue: #34547A,
+    nickel: #727272,
+    bright-grey: #EEEFF1
+);
+
+$font-sizes: (
+    xs: 13px,
+    s: 14px,
+    basic: 16px,
+    m: 18px,
+    ml: 21px,
+    l: 25px,
+    xl: 28px
+);
+
+$gaps: (
+    sm: 10px,
+    base: 20px,
+    m: 25px,
+    ml: 30px,
+    lg: 40px,
+    l: 50px,
+    xl: 80px
+);
+
+$line-heights: (
+    xxs: 16px,
+    xs: 20px,
+    s: 24px,
+    m: 26px,
+    l: 35px
+);
+
+$font: "Roboto", serif;
+$font-regular: 400;
+$font-medium: 500;
