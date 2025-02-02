@@ -1,0 +1,8 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.btn-write-me {
+    font-family: $font;
+    @include button(map-get($colors, metallic-blue), map-get($colors, white), 19px 41px map-get($gaps, base));
+
+}

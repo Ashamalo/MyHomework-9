@@ -1,0 +1,21 @@
+@use 'variables' as *;
+
+footer {
+    padding: map-get($gaps, l) 0;
+
+    p:first-child {
+        font-weight: $font-medium;
+        font-size: map-get($font-sizes, ml);
+        line-height: map-get($line-heights, s);
+        color: map-get($colors, white);
+        padding: 0 0 map-get($gaps, base) 0;
+    }
+
+    p:last-child {
+        font-weight: $font-regular;
+        font-size: map-get($font-sizes, xs);
+        line-height: map-get($line-heights, xs);
+        color: map-get($colors, white);
+        padding: 0;
+    }
+}
